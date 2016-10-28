@@ -1,0 +1,6 @@
+ci:
+  - mvn dependency:resolve
+  - mvn verify
+  - mvn package
+  - cp target/sparkexample-jar-with-dependencies.jar $ALAUDACI_DEST_DIR/web-example.jar
+  - cp Dockerfile $ALAUDACI_DEST_DIR
